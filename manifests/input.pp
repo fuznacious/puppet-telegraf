@@ -12,6 +12,9 @@
 #
 # [*sections*]
 #   Hash. Some inputs take multiple sections in [[double brackets]].
+#
+# [*tags*]
+#   Hash. key/value pairs of tags to be applied to this input plugin.
 
 define telegraf::input (
   $plugin_type    = $name,
