@@ -4,6 +4,14 @@
   <%= option -%> = <% if value.is_a?(String) %>"<%= value %>"<% elsif value.is_a?(Array) %><%= value.inspect %><% else %><%= value %><% end %>
 <%          end -%>
 <%      end -%>
+<% if @tags -%>
+  [inputs.<%= @plugin_type %>.tags]
+<%  @tags.sort.each do |tag, value| -%>
+<%         unless value == nil -%>
+    <%= tag -%> = "<%= value -%>"
+<%          end -%>
+<%      end -%>
+<%   end -%>
 <% if @sections -%>
 <% @sections.sort.each do |section, option| -%>
 [[inputs.<%= section %>]]

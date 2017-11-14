@@ -18,6 +18,7 @@ define telegraf::input (
   $options        = undef,
   $single_section = undef,
   $sections       = undef,
+  $tags           = undef,
 ) {
   include telegraf
 
